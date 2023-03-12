@@ -35,19 +35,28 @@ print('Матрица А:')
 for i in range(n):
     print(A[i])
 
-middle_n = math.ceil(n/2)
-print(middle_n)
+middle_n = math.ceil(n/2) # определение середины матрицы А
+
+# вычленяем матрицы Е и В через срезы
+# проверка n на четность нужна для корректного среза(чтобы матрица А делилась на равные 4 подматрицы)
 
 print("Е:")
 if n %2 == 0:
     E = [A[i][middle_n:n] for i in range(0,middle_n)]
 else:
     E = [A[i][middle_n-1:n] for i in range(0, middle_n)]
-print(E)
+
+for i in range(middle_n):
+    print(E[i])
+
+
+
 
 print("B:")
 if n %2 == 0:
     B = [A[i][middle_n:n] for i in range(middle_n,n)]
 else:
     B = [A[i][middle_n-1:n] for i in range(middle_n-1,n)]
-print(B)
+
+for i in range(middle_n):
+    print(B[i])
