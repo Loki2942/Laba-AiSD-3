@@ -90,7 +90,7 @@ else:
           'области 3, значит  меняем\nв В и Е местами несимметрично.\n')
 
     for i in range(ceil(n/2)):
-        for j in range(ceil(n/2)-1,n):
+        for j in range(ceil(n/2),n):
             F[i][j] = F_dump[floor(n / 2) + i][j]
             F[floor(n / 2) + i][j] = F_dump[i][j]
     print("Матрица F:")
