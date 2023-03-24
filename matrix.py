@@ -73,10 +73,6 @@ for i in range(submatrix_order):
 
 # ниже выполнение инструкций по условию
 if minvalue > sumvalue:
-    print('\nВ Е минимальный элемент в нечетных столбцах в области 1 больше,\n'
-          'чем сумма чисел в нечетных строках в '
-          'области 3, значит  меняем\nв В симметрично области 3 и 2 местами\n')
-
     for i in range(submatrix_order, n):
         for j in range(submatrix_order, n):
             if i >= j:
@@ -85,10 +81,6 @@ if minvalue > sumvalue:
     F = F_dump
     printMatrix(F)
 else:
-    print('\nВ Е минимальный элемент в нечетных столбцах в области 1 меньше или равен,\n'
-          'чем сумма чисел в нечетных строках в '
-          'области 3, значит  меняем\nв В и Е местами несимметрично.\n')
-
     for i in range(ceil(n/2)):
         for j in range(ceil(n/2),n):
             F[i][j] = F_dump[floor(n / 2) + i][j]
